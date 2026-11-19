@@ -36,17 +36,25 @@ export default function Header() {
             <Link to="/" className={`text-sm font-medium transition ${isActive('/') ? 'text-gold' : 'text-softgray hover:text-white'}`}>Home</Link>
             <Link to="/about" className={`text-sm font-medium transition ${isActive('/about') ? 'text-gold' : 'text-softgray hover:text-white'}`}>About</Link>
             
-            <div className="relative group" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
-              <button className="flex items-center gap-1 text-sm font-medium text-softgray hover:text-white transition">
+            <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
+              <button
+                type="button"
+                aria-haspopup="true"
+                aria-expanded={servicesOpen}
+                onClick={() => setServicesOpen(true)}
+                className="flex items-center gap-1 text-sm font-medium text-softgray hover:text-white transition"
+              >
                 Services <ChevronDown size={16} />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 glass rounded-xl p-2 shadow-2xl border border-gold/30">
-                  {services.map((s) => (
-                    <Link key={s.path} to={s.path} className="block px-4 py-3 text-sm text-softgray hover:text-white hover:bg-royal/50 rounded-lg transition">
-                      {s.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 w-64 pt-2">
+                  <div className="glass rounded-xl p-2 shadow-2xl border border-gold/30">
+                    {services.map((s) => (
+                      <Link key={s.path} to={s.path} onClick={() => setServicesOpen(false)} className="block px-4 py-3 text-sm text-softgray hover:text-white hover:bg-royal/50 rounded-lg transition">
+                        {s.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

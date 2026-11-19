@@ -41,12 +41,12 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="flex flex-col gap-4 xl:flex-row"
           >
-            <Link to="#services" className="bg-gold hover:bg-lightgold text-navy px-8 py-4 rounded-full font-semibold text-lg transition flex items-center justify-center gap-2">
+            <a href="#services" className="bg-gold hover:bg-lightgold text-navy px-8 py-4 rounded-full font-semibold text-lg transition flex items-center justify-center gap-2">
               Explore Our Services <ArrowRight size={20} />
-            </Link>
-            <a href="tel:+971556058452" className="border-2 border-gold text-gold hover:bg-gold hover:text-navy px-8 py-4 rounded-full font-semibold text-lg transition">
-              Book a Consultation
             </a>
+            <Link to="/contact" className="border-2 border-gold text-gold hover:bg-gold hover:text-navy px-8 py-4 rounded-full font-semibold text-lg transition text-center">
+              Book a Consultation
+            </Link>
           </motion.div>
           </div>
         </div>
