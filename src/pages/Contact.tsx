@@ -20,13 +20,31 @@ export default function Contact() {
             <div className="glass rounded-2xl p-8 text-center">
               <Phone className="text-gold mx-auto mb-4" size={32} />
               <h3 className="text-xl font-semibold mb-2">Phone</h3>
-              <a href="tel:+971556058452" className="text-softgray hover:text-gold">+971 55 605 8452</a>
-              <div className="text-sm text-softgray mt-2">Hussain Mazher</div>
+              <div className="space-y-4">
+                {[
+                  { name: 'Moiz Mazhar', phone: '+971 56 877 2552', tel: '+971568772552' },
+                  { name: 'Muhammad Laeeq', phone: '+971 55 398 3077', tel: '+971553983077' },
+                  { name: 'Hussain Mazher', phone: '+971 55 605 8452', tel: '+971556058452' },
+                ].map((person) => (
+                  <div key={person.tel}>
+                    <div className="text-sm text-softgray">{person.name}</div>
+                    <a href={`tel:${person.tel}`} className="text-softgray hover:text-gold">{person.phone}</a>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="glass rounded-2xl p-8 text-center">
               <Mail className="text-gold mx-auto mb-4" size={32} />
               <h3 className="text-xl font-semibold mb-2">Email</h3>
-              <a href="mailto:hussain@theexcellentgroup.com" className="text-softgray hover:text-gold break-all">hussain@theexcellentgroup.com</a>
+              <div className="space-y-2">
+                {[
+                  'moiz@theexcellentgroup.com',
+                  'laeeq@theexcellentgroup.com',
+                  'hussain@theexcellentgroup.com',
+                ].map((email) => (
+                  <a key={email} href={`mailto:${email}`} className="block text-sm text-softgray hover:text-gold break-all">{email}</a>
+                ))}
+              </div>
             </div>
             <div className="glass rounded-2xl p-8 text-center">
               <MapPin className="text-gold mx-auto mb-4" size={32} />

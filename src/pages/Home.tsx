@@ -24,42 +24,22 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-darkblue to-royal opacity-90" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent" />
-        
-        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+      <section className="grid min-h-[90vh] overflow-hidden bg-gradient-to-br from-navy via-darkblue to-royal md:grid-cols-2">
+        <div className="flex items-center px-6 py-20 sm:px-10 lg:px-16">
+          <div className="relative z-10 mx-auto max-w-3xl md:mx-0">
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6"
+            className="font-serif text-5xl md:text-6xl xl:text-7xl font-bold leading-tight mb-6"
           >
-            One Trusted Partner.<br />
-            <span className="text-transparent bg-clip-text gold-gradient">Complete Business Solutions.</span>
+            <span className="text-gold">One Trusted Partner.</span>
           </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-softgray max-w-3xl mx-auto mb-6"
-          >
-            Helping Businesses Start, Manage, Comply & Grow in the UAE.
-          </motion.p>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-lg text-softgray max-w-3xl mx-auto mb-10"
-          >
-            From company formation and bookkeeping to corporate tax, VAT, e-invoicing and specialist business advisory, we deliver selected services directly and coordinate others through our professional network. One point of contact, practical guidance and the right expertise for your needs.
-          </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col gap-4 xl:flex-row"
           >
             <Link to="#services" className="bg-gold hover:bg-lightgold text-navy px-8 py-4 rounded-full font-semibold text-lg transition flex items-center justify-center gap-2">
               Explore Our Services <ArrowRight size={20} />
@@ -68,7 +48,18 @@ export default function Home() {
               Book a Consultation
             </a>
           </motion.div>
+          </div>
         </div>
+        <div className="relative min-h-[360px] overflow-hidden border-t border-gold/20 md:min-h-full md:border-t-0">
+          <img
+            src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=85"
+            alt="Dubai skyline with the Burj Khalifa"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/35 via-transparent to-navy/10" />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-navy/50 to-transparent" />
+        </div>
+        <div aria-hidden="true" className="absolute inset-y-0 left-1/2 z-10 hidden w-1 -translate-x-1/2 bg-gold md:block" />
       </section>
 
       {/* Introduction */}

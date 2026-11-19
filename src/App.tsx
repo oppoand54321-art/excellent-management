@@ -12,6 +12,7 @@ import EInvoicing from './pages/EInvoicing'
 import Audit from './pages/Audit'
 import BusinessAdvisory from './pages/BusinessAdvisory'
 import ScrollToTop from './components/ScrollToTop'
+import WhatsAppButton from './components/WhatsAppButton'
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         </main>
         <Footer />
       </div>
+      <WhatsAppButton />
     </Router>
   )
 }

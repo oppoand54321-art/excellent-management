@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChevronDown, Phone } from 'lucide-react'
+import logo from '../assets/logo.png'
 
 const services = [
   { name: 'Business Formation', path: '/services/business-formation' },
@@ -24,7 +25,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 gold-gradient rounded-lg flex items-center justify-center text-navy font-bold text-xl">EM</div>
+            <img src={logo} alt="The Excellent Group logo" className="w-12 h-12 shrink-0 rounded-lg bg-white p-1 object-contain" />
             <div>
               <div className="font-serif text-xl font-semibold text-white">Excellent Management</div>
               <div className="text-xs text-lightgold">Consultancy</div>

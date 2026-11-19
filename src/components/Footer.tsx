@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { Phone, Mail, MapPin } from 'lucide-react'
+import { Phone, MapPin } from 'lucide-react'
+import logo from '../assets/logo.png'
 
 const services = [
   { name: 'Business Formation', path: '/services/business-formation' },
@@ -19,7 +20,7 @@ export default function Footer() {
           {/* Company */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 gold-gradient rounded-lg flex items-center justify-center text-navy font-bold">EM</div>
+              <img src={logo} alt="The Excellent Group logo" className="w-16 h-16 shrink-0 rounded-lg bg-white p-1 object-contain" />
               <div className="font-serif text-xl font-semibold">Excellent Management</div>
             </div>
             <p className="text-softgray text-sm leading-relaxed mb-6">
@@ -54,20 +55,23 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold mb-6">Contact Us</h3>
+            <h3 className="text-white font-semibold mb-6">For business formation, bookkeeping, corporate tax, VAT, e-invoicing and professional consultancy</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <Phone size={18} className="text-gold mt-0.5" />
-                <div>
-                  <div className="text-sm text-softgray">Hussain Mazher</div>
-                  <a href="tel:+971556058452" className="text-white hover:text-gold transition">+971 55 605 8452</a>
+                <Phone size={18} className="text-gold mt-0.5 shrink-0" />
+                <div className="space-y-3 text-sm">
+                  {[
+                    { name: 'Moiz Mazhar', phone: '+971 56 877 2552', tel: '+971568772552', email: 'moiz@theexcellentgroup.com' },
+                    { name: 'Muhammad Laeeq', phone: '+971 55 398 3077', tel: '+971553983077', email: 'laeeq@theexcellentgroup.com' },
+                    { name: 'Hussain Mazher', phone: '+971 55 605 8452', tel: '+971556058452', email: 'hussain@theexcellentgroup.com' },
+                  ].map((person) => (
+                    <div key={person.email}>
+                      <div className="text-softgray">{person.name}</div>
+                      <a href={`tel:${person.tel}`} className="block text-white hover:text-gold transition">{person.phone}</a>
+                      <a href={`mailto:${person.email}`} className="block break-all text-white hover:text-gold transition">{person.email}</a>
+                    </div>
+                  ))}
                 </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Mail size={18} className="text-gold mt-0.5" />
-                <a href="mailto:hussain@theexcellentgroup.com" className="text-white hover:text-gold transition text-sm">
-                  hussain@theexcellentgroup.com
-                </a>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-gold mt-0.5" />
