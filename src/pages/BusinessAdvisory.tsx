@@ -6,7 +6,7 @@ export default function BusinessAdvisory() {
     <div>
       <section className="relative py-32 bg-gradient-to-br from-navy via-darkblue to-royal">
         <div className="relative max-w-5xl mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 bg-gold/20 text-gold px-4 py-2 rounded-full text-sm mb-6"><Users size={18} /> Advisory</div>
+          <div className="inline-flex items-center gap-2 bg-gold/20 px-4 py-2 rounded-full text-sm mb-6"><Users size={18} className="text-gold" /> <span className="gold-wording">Advisory</span></div>
           <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">Business Advisory & Professional Services Coordination</h1>
           <p className="text-2xl text-softgray">The Right People. The Right Solutions.</p>
         </div>

@@ -6,7 +6,7 @@ export default function CorporateTax() {
     <div>
       <section className="relative py-32 bg-gradient-to-br from-navy to-royal">
         <div className="relative max-w-5xl mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 bg-gold/20 text-gold px-4 py-2 rounded-full text-sm mb-6"><Scale size={18} /> Corporate Tax</div>
+          <div className="inline-flex items-center gap-2 bg-gold/20 px-4 py-2 rounded-full text-sm mb-6"><Scale size={18} className="text-gold" /> <span className="gold-wording">Corporate Tax</span></div>
           <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">Corporate Tax Consultancy</h1>
           <p className="text-2xl text-softgray">Navigate Tax Obligations with Confidence.</p>
         </div>

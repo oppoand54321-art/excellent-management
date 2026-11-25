@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+:root {
+  --gold-wording-gradient: linear-gradient(180deg, #ffffff 0%, #ffffff 22%, #a9771f 100%);
+}
+
+@layer base {
+  h1:not(.text-white):not(.text-softgray),
+  h2:not(.text-white):not(.text-softgray),
+  h3:not(.text-white):not(.text-softgray) {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gold-wording-gradient);
+  }
+}
 
 html {
   scroll-behavior: smooth;
@@ -13,9 +26,17 @@ body {
 }
 
 .glass {
-  background: rgba(11, 29, 50, 0.6);
+  background: rgba(8, 9, 10, 0.78);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(214, 166, 74, 0.2);
+  border: 1px solid rgba(214, 166, 74, 0.24);
+}
+
+.gold-wording {
+  background-image: var(--gold-wording-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .gold-gradient {
@@ -23,5 +44,5 @@ body {
 }
 
 .blue-gradient {
-  background: linear-gradient(135deg, #0B1D32, #123C68);
+  background: linear-gradient(135deg, #050607, #17191C);
 }

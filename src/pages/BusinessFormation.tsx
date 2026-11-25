@@ -15,8 +15,8 @@ export default function BusinessFormation() {
     <div>
       <section className="relative py-32 bg-gradient-to-br from-navy via-royal to-darkblue">
         <div className="relative max-w-5xl mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 bg-gold/20 text-gold px-4 py-2 rounded-full text-sm mb-6">
-            <Building2 size={18} /> Business Formation
+          <div className="inline-flex items-center gap-2 bg-gold/20 px-4 py-2 rounded-full text-sm mb-6">
+            <Building2 size={18} className="text-gold" /> <span className="gold-wording">Business Formation</span>
           </div>
           <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">Business Formation & Company Setup</h1>
           <p className="text-2xl text-softgray">Your Business Journey Starts Here.</p>

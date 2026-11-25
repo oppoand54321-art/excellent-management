@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="grid min-h-[90vh] overflow-hidden bg-gradient-to-br from-navy via-darkblue to-royal md:grid-cols-2">
+      <section className="grid min-h-[70vh] overflow-hidden bg-gradient-to-br from-navy via-darkblue to-royal md:grid-cols-2">
         <div className="flex items-center px-6 py-20 sm:px-10 lg:px-16">
           <div className="relative z-10 mx-auto max-w-3xl md:mx-0">
           <motion.h1 
@@ -33,7 +33,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="font-serif text-5xl md:text-6xl xl:text-7xl font-bold leading-tight mb-6"
           >
-            <span className="text-gold">One Trusted Partner.</span>
+            <span className="gold-wording">One Trusted Partner.</span>
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -44,13 +44,13 @@ export default function Home() {
             <a href="#services" className="bg-gold hover:bg-lightgold text-navy px-8 py-4 rounded-full font-semibold text-lg transition flex items-center justify-center gap-2">
               Explore Our Services <ArrowRight size={20} />
             </a>
-            <Link to="/contact" className="border-2 border-gold text-gold hover:bg-gold hover:text-navy px-8 py-4 rounded-full font-semibold text-lg transition text-center">
+            <Link to="/contact" className="border-2 border-gold gold-wording hover:brightness-125 px-8 py-4 rounded-full font-semibold text-lg transition text-center">
               Book a Consultation
             </Link>
           </motion.div>
           </div>
         </div>
-        <div className="relative min-h-[360px] overflow-hidden border-t border-gold/20 md:min-h-full md:border-t-0">
+        <div className="relative min-h-[280px] overflow-hidden border-t border-gold/20 md:min-h-[70vh] md:border-t-0">
           <img
             src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=85"
             alt="Dubai skyline with the Burj Khalifa"
@@ -94,7 +94,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-semibold mb-4">{s.title}</h3>
                 <p className="text-softgray mb-6 leading-relaxed">{s.desc}</p>
-                <Link to={s.path} className="inline-flex items-center gap-2 text-gold hover:text-lightgold font-medium transition">
+                <Link to={s.path} className="inline-flex items-center gap-2 gold-wording hover:brightness-125 font-medium transition">
                   Learn More <ArrowRight size={18} />
                 </Link>
               </motion.div>

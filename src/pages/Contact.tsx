@@ -1,12 +1,12 @@
-import { Phone, Mail, MapPin } from 'lucide-react'
+import { Phone, MapPin } from 'lucide-react'
 
 export default function Contact() {
   return (
     <div>
-      <section className="relative py-32 bg-gradient-to-br from-navy to-royal">
+      <section className="relative py-14 md:py-16 bg-gradient-to-br from-navy to-royal">
         <div className="relative max-w-5xl mx-auto px-4 text-center">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
-          <p className="text-2xl text-softgray">Let’s Find the Right Solution for Your Business.</p>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-3 text-gold">Contact Us</h1>
+          <p className="text-xl text-softgray">Let’s Find the Right Solution for Your Business.</p>
         </div>
       </section>
 
@@ -16,40 +16,32 @@ export default function Contact() {
             For business formation, bookkeeping, corporate tax, VAT, e-invoicing and professional consultancy, contact us to discuss your requirements.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="glass rounded-2xl p-8 text-center">
-              <Phone className="text-gold mx-auto mb-4" size={32} />
-              <h3 className="text-xl font-semibold mb-2">Phone</h3>
-              <div className="space-y-4">
-                {[
-                  { name: 'Moiz Mazhar', phone: '+971 56 877 2552', tel: '+971568772552' },
-                  { name: 'Muhammad Laeeq', phone: '+971 55 398 3077', tel: '+971553983077' },
-                  { name: 'Hussain Mazher', phone: '+971 55 605 8452', tel: '+971556058452' },
-                ].map((person) => (
-                  <div key={person.tel}>
-                    <div className="text-sm text-softgray">{person.name}</div>
-                    <a href={`tel:${person.tel}`} className="text-softgray hover:text-gold">{person.phone}</a>
-                  </div>
-                ))}
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            {[
+              { name: 'Hussain Mazher', services: 'Bookkeeping & Accounting, Corporate Tax, VAT, E-Invoicing and Audit Coordination', phone: '+971 55 605 8452', tel: '+971556058452', email: 'hussain@thexcellentgroup.com' },
+              { name: 'Moiz Mazhar', services: 'Business Formation', phone: '+971 56 877 2552', tel: '+971568772552', email: 'moiz@thexcellentgroup.com' },
+              { name: 'Muhammad Laeeq', services: 'Business Advisory', phone: '+971 55 398 3077', tel: '+971553983077', email: 'laeeq@thexcellentgroup.com' },
+            ].map((person) => (
+              <div key={person.email} className="glass rounded-2xl p-7 text-center">
+                <Phone className="text-gold mx-auto mb-4" size={30} />
+                <h3 className="text-xl font-semibold mb-2">{person.name}</h3>
+                <p className="min-h-16 text-sm leading-relaxed text-softgray mb-4">{person.services}</p>
+                <a href={`tel:${person.tel}`} className="block text-softgray hover:text-gold">{person.phone}</a>
+                <a href={`mailto:${person.email}`} className="mt-2 block break-all text-sm text-softgray hover:text-gold">{person.email}</a>
+                {person.name === 'Hussain Mazher' && (
+                  <a href="mailto:info@theexcellentmanagement.com" className="mt-1 block break-all text-sm text-softgray hover:text-gold">
+                    info@theexcellentmanagement.com
+                  </a>
+                )}
               </div>
-            </div>
-            <div className="glass rounded-2xl p-8 text-center">
-              <Mail className="text-gold mx-auto mb-4" size={32} />
-              <h3 className="text-xl font-semibold mb-2">Email</h3>
-              <div className="space-y-2">
-                {[
-                  'moiz@theexcellentgroup.com',
-                  'laeeq@theexcellentgroup.com',
-                  'hussain@theexcellentgroup.com',
-                ].map((email) => (
-                  <a key={email} href={`mailto:${email}`} className="block text-sm text-softgray hover:text-gold break-all">{email}</a>
-                ))}
-              </div>
-            </div>
-            <div className="glass rounded-2xl p-8 text-center">
-              <MapPin className="text-gold mx-auto mb-4" size={32} />
-              <h3 className="text-xl font-semibold mb-2">Location</h3>
-              <div className="text-softgray">United Arab Emirates</div>
+            ))}
+          </div>
+
+          <div className="glass mb-12 flex flex-col items-center justify-center gap-3 rounded-2xl p-6 text-center sm:flex-row">
+            <MapPin className="shrink-0 text-gold" size={24} />
+            <div>
+              <h3 className="font-semibold">Our Location</h3>
+              <p className="text-softgray">Block B, Office B22-030, Sharjah, UAE</p>
             </div>
           </div>
 

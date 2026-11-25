@@ -6,7 +6,7 @@ export default function Audit() {
     <div>
       <section className="relative py-32 bg-gradient-to-br from-royal to-navy">
         <div className="relative max-w-5xl mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 bg-gold/20 text-gold px-4 py-2 rounded-full text-sm mb-6"><Search size={18} /> Audit</div>
+          <div className="inline-flex items-center gap-2 bg-gold/20 px-4 py-2 rounded-full text-sm mb-6"><Search size={18} className="text-gold" /> <span className="gold-wording">Audit</span></div>
           <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">Audit Coordination & Financial Review</h1>
           <p className="text-2xl text-softgray">Reliable Financial Information Builds Confidence.</p>
         </div>

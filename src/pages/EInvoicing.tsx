@@ -6,7 +6,7 @@ export default function EInvoicing() {
     <div>
       <section className="relative py-32 bg-gradient-to-br from-navy to-darkblue">
         <div className="relative max-w-5xl mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 bg-gold/20 text-gold px-4 py-2 rounded-full text-sm mb-6"><FileText size={18} /> E-Invoicing</div>
+          <div className="inline-flex items-center gap-2 bg-gold/20 px-4 py-2 rounded-full text-sm mb-6"><FileText size={18} className="text-gold" /> <span className="gold-wording">E-Invoicing</span></div>
           <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">E-Invoicing Readiness & Advisory</h1>
           <p className="text-2xl text-softgray">Prepare Your Business for Digital Compliance.</p>
         </div>

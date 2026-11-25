@@ -20,14 +20,14 @@ export default function Footer() {
           {/* Company */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <img src={logo} alt="The Excellent Group logo" className="w-16 h-16 shrink-0 rounded-lg bg-white p-1 object-contain" />
-              <div className="font-serif text-xl font-semibold">Excellent Management</div>
+              <img src={logo} alt="The Excellent Group logo" className="w-20 h-20 shrink-0 rounded-lg bg-white p-1 object-contain" />
+              <div className="font-serif text-xl font-semibold gold-wording">The Excellent Management Consultancy</div>
             </div>
             <p className="text-softgray text-sm leading-relaxed mb-6">
               One Trusted Partner. Complete Business Solutions.<br />
               Helping Businesses Start, Manage, Comply & Grow in the UAE.
             </p>
-            <div className="text-gold text-sm font-medium">Part of Excellent Group</div>
+            <div className="gold-wording text-sm font-medium">Part of Excellent Group</div>
           </div>
 
           {/* Navigation */}
@@ -55,27 +55,32 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold mb-6">For business formation, bookkeeping, corporate tax, VAT, e-invoicing and professional consultancy</h3>
+            <h3 className="text-white font-semibold mb-6">For Business Formation, Bookkeeping, Corporate Tax, VAT, E-Invoicing and Professional Consultancy</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <Phone size={18} className="text-gold mt-0.5 shrink-0" />
                 <div className="space-y-3 text-sm">
                   {[
-                    { name: 'Moiz Mazhar', phone: '+971 56 877 2552', tel: '+971568772552', email: 'moiz@theexcellentgroup.com' },
-                    { name: 'Muhammad Laeeq', phone: '+971 55 398 3077', tel: '+971553983077', email: 'laeeq@theexcellentgroup.com' },
-                    { name: 'Hussain Mazher', phone: '+971 55 605 8452', tel: '+971556058452', email: 'hussain@theexcellentgroup.com' },
+                    { name: 'Hussain Mazher', phone: '+971 55 605 8452', tel: '+971556058452', email: 'hussain@thexcellentgroup.com' },
+                    { name: 'Moiz Mazhar', phone: '+971 56 877 2552', tel: '+971568772552', email: 'moiz@thexcellentgroup.com' },
+                    { name: 'Muhammad Laeeq', phone: '+971 55 398 3077', tel: '+971553983077', email: 'laeeq@thexcellentgroup.com' },
                   ].map((person) => (
                     <div key={person.email}>
                       <div className="text-softgray">{person.name}</div>
                       <a href={`tel:${person.tel}`} className="block text-white hover:text-gold transition">{person.phone}</a>
                       <a href={`mailto:${person.email}`} className="block break-all text-white hover:text-gold transition">{person.email}</a>
+                      {person.name === 'Hussain Mazher' && (
+                        <a href="mailto:info@theexcellentmanagement.com" className="block break-all text-white hover:text-gold transition">
+                          info@theexcellentmanagement.com
+                        </a>
+                      )}
                     </div>
                   ))}
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-gold mt-0.5" />
-                <div className="text-softgray text-sm">United Arab Emirates</div>
+                <div className="text-softgray text-sm">Block B, Office B22-030, Sharjah, UAE</div>
               </div>
             </div>
             <a 

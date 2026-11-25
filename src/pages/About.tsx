@@ -2,10 +2,10 @@
 export default function About() {
   return (
     <div>
-      <section className="relative py-32 bg-gradient-to-br from-navy via-royal to-darkblue">
+      <section className="relative py-14 md:py-16 bg-gradient-to-br from-navy via-royal to-darkblue">
         <div className="relative max-w-5xl mx-auto px-4 text-center">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">About Us</h1>
-          <p className="text-2xl text-softgray">Part of Excellent Group</p>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-3 text-gold">About Us</h1>
+          <p className="text-xl text-softgray">Part of Excellent Group</p>
         </div>
       </section>
 

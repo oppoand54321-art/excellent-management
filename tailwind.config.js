@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: '#071321',
-        darkblue: '#0B1D32',
-        royal: '#123C68',
+        navy: '#050607',
+        darkblue: '#0C0D0F',
+        royal: '#17191C',
         gold: '#D6A64A',
         lightgold: '#F3D58A',
         softgray: '#D5DCE5',

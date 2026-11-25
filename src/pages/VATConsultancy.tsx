@@ -6,7 +6,7 @@ export default function VATConsultancy() {
     <div>
       <section className="relative py-32 bg-gradient-to-br from-darkblue via-royal to-navy">
         <div className="relative max-w-5xl mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 bg-gold/20 text-gold px-4 py-2 rounded-full text-sm mb-6"><Receipt size={18} /> VAT</div>
+          <div className="inline-flex items-center gap-2 bg-gold/20 px-4 py-2 rounded-full text-sm mb-6"><Receipt size={18} className="text-gold" /> <span className="gold-wording">VAT</span></div>
           <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">VAT Consultancy & Compliance</h1>
           <p className="text-2xl text-softgray">Making VAT Compliance Simpler.</p>
         </div>
